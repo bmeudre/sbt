@@ -1,3 +1,6 @@
 language: scala
 scala:
-   - 2.12.2
+  - 2.12.2
+script:
+  - cat /dev/null | sbt ++$TRAVIS_SCALA_VERSION test:compile
+  - cat /dev/null | sbt ++$TRAVIS_SCALA_VERSION test:test
